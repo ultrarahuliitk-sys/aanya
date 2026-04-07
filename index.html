@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Step into Aanya’s private world. Exclusive daily content, real conversations, and members-only drops you won’t see anywhere else." />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="Aanya Official | Private Exclusive Content" />
+  <meta property="og:description" content="Step into Aanya’s private world. Exclusive daily content, real conversations, and members-only drops you won’t see anywhere else." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80" />
+  <meta property="og:url" content="https://aanyavibes.com/" />
+  <title>Aanya Official | Private Exclusive Content</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=70">
+  <style>
+    :root {
+      --bg: #000;
+      --text: #fff;
+      --gold: #d4af37;
+      --pink: #ff4da6;
+      --muted: #b8b8b8;
+      --card: #111;
+      --grad: linear-gradient(90deg, #ff4da6 0%, #d4af37 100%);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #130913 0%, #000 45%);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 4rem 0;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.2;
+      margin: 0 0 1rem;
+    }
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 0.2px;
+    }
+
+    p { margin: 0; color: #f5f5f5; }
+
+    .headline-glow {
+      text-shadow: 0 0 12px rgba(255, 77, 166, 0.35), 0 0 16px rgba(212, 175, 55, 0.25);
+    }
+
+    .cta-btn {
+      border: 0;
+      color: #111;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      padding: 0.95rem 1.6rem;
+      border-radius: 30px;
+      background: var(--grad);
+      box-shadow: 0 0 0 rgba(255, 77, 166, 0);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      animation: pulse 2.4s infinite;
+    }
+
+    .cta-btn:hover,
+    .cta-btn:focus-visible {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 0 22px rgba(255, 77, 166, 0.5), 0 0 26px rgba(212, 175, 55, 0.35);
+      outline: none;
+    }
+
+    .hero {
+      padding-top: 2rem;
+      padding-bottom: 3rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 1.6rem;
+      align-items: center;
+    }
+
+    .hero-copy h1 {
+      font-size: clamp(1.85rem, 6vw, 3.4rem);
+      margin-bottom: 0.85rem;
+    }
+
+    .hero-copy p {
+      font-size: clamp(1rem, 2.8vw, 1.16rem);
+      color: #f0e9ef;
+      max-width: 46ch;
+      margin-bottom: 1.2rem;
+    }
+
+    .micro-copy {
+      margin-top: 0.7rem;
+      font-size: 0.86rem;
+      color: var(--gold);
+      letter-spacing: 0.2px;
+    }
+
+    .urgency {
+      margin-top: 0.65rem;
+      font-size: 0.9rem;
+      color: var(--pink);
+    }
+
+    .hero-image {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      box-shadow: 0 10px 36px rgba(0,0,0,0.6), 0 0 50px rgba(255,77,166,0.15);
+    }
+
+    .hero-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.05));
+      pointer-events: none;
+    }
+
+    .social-strip {
+      border-top: 1px solid rgba(212, 175, 55, 0.2);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+      background: #090909;
+    }
+
+    .social-items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--gold);
+      font-size: clamp(1.1rem, 4vw, 1.7rem);
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 0.6rem;
+      justify-content: center;
+      margin-top: 0.45rem;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .preview-grid {
+      margin-top: 1.6rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.9rem;
+    }
+
+    .preview-item {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 77, 166, 0.24);
+      transition: transform .25s ease;
+    }
+
+    .preview-item:hover { transform: scale(1.02); }
+
+    .preview-item img {
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      filter: blur(8px) brightness(0.7);
+      transform: scale(1.08);
+    }
+
+    .locked {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      text-align: center;
+      background: linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,.2));
+      color: #fff;
+      text-shadow: 0 1px 4px rgba(0,0,0,.6);
+    }
+
+    .cards,
+    .steps {
+      display: grid;
+      gap: 0.9rem;
+      margin-top: 1.2rem;
+    }
+
+    .card,
+    .step {
+      background: linear-gradient(160deg, rgba(17,17,17,.95), rgba(10,10,10,.95));
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: 16px;
+      padding: 1rem;
+    }
+
+    .card h3,
+    .step h3 { margin-bottom: 0.4rem; }
+
+    .icon {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(255,77,166,.14);
+      margin-bottom: 0.6rem;
+      border: 1px solid rgba(255,77,166,.4);
+    }
+
+    .conversion {
+      text-align: center;
+      background: radial-gradient(circle at center, rgba(255,77,166,0.12) 0%, rgba(0,0,0,0) 65%);
+      border-top: 1px solid rgba(212,175,55,.3);
+      border-bottom: 1px solid rgba(212,175,55,.3);
+    }
+
+    .conversion p {
+      max-width: 56ch;
+      margin: 0 auto 1.2rem;
+    }
+
+    .collab {
+      text-align: center;
+    }
+
+
+    .india-proof {
+      margin-top: -0.45rem;
+      margin-bottom: 0.9rem;
+      font-size: 0.85rem;
+      color: var(--pink);
+      opacity: 0.92;
+    }
+
+    .scarcity-line {
+      margin-top: 0.7rem;
+      font-size: 0.9rem;
+      color: var(--pink);
+    }
+
+    .live-viewers {
+      margin-top: 0.35rem;
+      font-size: 0.88rem;
+      color: var(--gold);
+      opacity: 0.95;
+    }
+
+    .trust-note {
+      margin-top: 0.35rem;
+      font-size: 0.78rem;
+      color: #9b9b9b;
+    }
+
+
+    .hero-private-line {
+      margin-top: -0.5rem;
+      margin-bottom: 0.45rem;
+      color: #f6d3e6;
+      font-size: 0.88rem;
+    }
+
+    .hero-badges {
+      margin-top: 0.8rem;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-badges a {
+      font-size: 0.72rem;
+      padding: 0.35rem 0.6rem;
+      border: 1px solid rgba(212,175,55,.35);
+      border-radius: 999px;
+      background: rgba(212,175,55,.08);
+      color: #f1e4b8;
+      text-decoration: none;
+      transition: border-color .2s ease, background .2s ease;
+    }
+
+    .hero-badges a:hover,
+    .hero-badges a:focus-visible {
+      border-color: rgba(255,77,166,.35);
+      background: rgba(212,175,55,.14);
+      outline: none;
+    }
+
+    .preview-item {
+      text-decoration: none;
+    }
+
+    .preview-item:hover {
+      box-shadow: 0 0 20px rgba(255,77,166,.3), 0 0 22px rgba(212,175,55,.25);
+    }
+
+    .hover-hint {
+      position: absolute;
+      left: 50%;
+      bottom: 10px;
+      transform: translateX(-50%);
+      font-size: 0.82rem;
+      color: var(--gold);
+      opacity: 0;
+      transition: opacity .25s ease;
+      text-shadow: 0 0 12px rgba(212,175,55,.45);
+      animation: glowText 1.6s ease-in-out infinite;
+    }
+
+    .preview-item:hover .hover-hint,
+    .preview-item:focus-visible .hover-hint {
+      opacity: 1;
+    }
+
+    .spots-left {
+      margin-top: 0.3rem;
+      color: #ffd98d;
+      font-size: 0.84rem;
+    }
+
+    .follow-public {
+      text-align: center;
+      border-top: 1px solid rgba(212,175,55,.2);
+      border-bottom: 1px solid rgba(212,175,55,.2);
+      background: #0b0b0b;
+    }
+
+    .public-links {
+      margin-top: 0.9rem;
+      display: flex;
+      gap: 0.6rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .public-links a,
+    .footer-social a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .footer-social {
+      margin-top: 0.35rem;
+      font-size: 0.82rem;
+      color: #bfbfbf;
+    }
+
+    .cta-flash {
+      box-shadow: 0 0 24px rgba(255,77,166,.55), 0 0 24px rgba(212,175,55,.45) !important;
+      transform: translateY(-2px) scale(1.03);
+    }
+
+
+    .micro-trust {
+      margin: 0.35rem 0 0.8rem;
+      color: #e8cb77;
+      font-size: 0.88rem;
+      opacity: 0.95;
+    }
+
+
+
+    .public-label {
+      margin-top: 0.55rem;
+      font-size: 0.78rem;
+      color: rgba(212,175,55,.78);
+    }
+
+    .conversion-trust {
+      margin-top: 0.7rem;
+      color: #c7c7c7;
+      font-size: 0.8rem;
+    }
+
+    .social-icon-row,
+    .footer-icon-row {
+      display: flex;
+      gap: 0.55rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .social-icon-row {
+      margin-top: 0.65rem;
+    }
+
+    .footer-icon-row {
+      margin-top: 0.45rem;
+      justify-content: center;
+    }
+
+    .social-icon-row a,
+    .footer-icon-row a {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(212,175,55,.38);
+      background: rgba(212,175,55,.08);
+      color: var(--gold);
+      display: grid;
+      place-items: center;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .footer-icon-row a {
+      width: 28px;
+      height: 28px;
+    }
+
+    .social-icon-row svg,
+    .footer-icon-row svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    .footer-icon-row svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .social-icon-row a:hover,
+    .footer-icon-row a:hover,
+    .social-icon-row a:focus-visible,
+    .footer-icon-row a:focus-visible {
+      box-shadow: 0 0 16px rgba(212,175,55,.35), 0 0 18px rgba(255,77,166,.24);
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .collab a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.14);
+      padding: 1.3rem 0 6rem;
+      text-align: center;
+      color: #d2d2d2;
+      font-size: 0.9rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.35rem;
+    }
+
+    .footer-links a { color: #d8d8d8; text-decoration: none; }
+
+    .sticky-cta {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 80;
+      background: rgba(0,0,0,.86);
+      backdrop-filter: blur(8px);
+      border-top: 1px solid rgba(212,175,55,.35);
+      padding: 0.65rem 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+
+    .sticky-cta small {
+      color: var(--gold);
+      font-size: .72rem;
+      display: none;
+    }
+
+    .floating-btn {
+      position: fixed;
+      right: 0.95rem;
+      bottom: 5rem;
+      z-index: 85;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      border: 0;
+      background: var(--grad);
+      color: #111;
+      font-size: 1.45rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 8px 24px rgba(255,77,166,.33);
+      transition: transform .2s ease;
+    }
+
+    .floating-btn:hover { transform: scale(1.07); }
+
+    .popup {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.78);
+      z-index: 100;
+      padding: 1rem;
+    }
+
+    .popup.show { display: flex; }
+
+    .popup-card {
+      width: min(450px, 95%);
+      background: #0f0f0f;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 77, 166, 0.4);
+      box-shadow: 0 0 36px rgba(255,77,166,.2);
+      padding: 1.4rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .close-popup {
+      position: absolute;
+      top: 0.45rem;
+      right: 0.65rem;
+      color: #fff;
+      background: transparent;
+      border: 0;
+      font-size: 1.25rem;
+      cursor: pointer;
+    }
+
+    .fade {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+
+    .fade.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (min-width: 700px) {
+      .hero-grid { grid-template-columns: 1fr 1fr; }
+      .preview-grid { grid-template-columns: repeat(3, 1fr); }
+      .cards { grid-template-columns: repeat(2, 1fr); }
+      .steps { grid-template-columns: repeat(3, 1fr); }
+      .sticky-cta small { display: inline; }
+      .sticky-cta { justify-content: center; }
+    }
+
+    @media (min-width: 980px) {
+      .hero { padding-top: 3rem; }
+      .section { padding: 5rem 0; }
+    }
+
+    @keyframes glowText {
+      0%,100% { text-shadow: 0 0 8px rgba(212,175,55,.35); }
+      50% { text-shadow: 0 0 16px rgba(255,77,166,.55); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255,77,166,.45); }
+      50% { box-shadow: 0 0 0 14px rgba(255,77,166,0); }
+    }
+  </style>
+  <link rel="icon" type="image/png" href="https://aanyavibes.com/favicon.png" />
+    <link rel="canonical" href="https://aanyavibes.com/" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Aanya",
+  "url": "https://aanyavibes.com/",
+  "sameAs": [
+    "https://instagram.com/aanyavibes",
+    "https://facebook.com/aanyavibes",
+    "https://youtube.com/@aanyavibes"
+  ]
+}
+</script>
+</head>
+<body>
+  <header class="hero section">
+    <div class="container hero-grid">
+      <div class="hero-copy fade">
+        <h1 class="headline-glow">Step Into My Private World 💋</h1>
+        <p>You’ve seen my public posts… but this is the side only insiders get to experience.</p>
+        <div class="hero-private-line">Instagram is public. This is where I’m real.</div>
+        <div class="india-proof">Join thousands of loyal supporters inside 💕</div>
+        <a href="#convert" class="cta-btn">Unlock My Private Page 🔥</a>
+        <div class="micro-copy">Private • 18+ • Not Posted Anywhere Else</div>
+        <div class="hero-badges" aria-label="Public social proof">
+          <a href="https://instagram.com/aanyavibes" target="_blank" rel="noopener noreferrer">📸 Active on Instagram</a>
+          <a href="https://facebook.com/aanyavibes" target="_blank" rel="noopener noreferrer">📘 Facebook Community</a>
+        </div>
+        <div class="public-label">Follow me publicly:</div>
+        <div class="social-icon-row" aria-label="Follow Aanya on social media">
+          <a href="https://instagram.com/aanyavibes" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5Zm8.9 1.4a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4Z"/></svg>
+          </a>
+          <a href="https://threads.net/@aanyavibes" target="_blank" rel="noopener noreferrer" aria-label="Threads">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 10.2c-.2-1.6-1.2-2.5-2.9-2.8-2-.3-4.1.2-5.1 1.4l1.4 1.1c.6-.7 1.9-1 3.4-.8.9.1 1.4.6 1.5 1.4-2.2.1-3.8.5-4.8 1.2-1 .7-1.4 1.6-1.3 2.7.1 1.8 1.7 3 4 3 1.7 0 2.9-.6 3.6-1.8.2.4.3.8.3 1.3 0 1.8-1.4 3.1-3.9 3.1-2.1 0-3.5-.8-4.4-2.3l-1.5 1c1.1 1.9 3 3.1 5.9 3.1 3.6 0 5.8-2 5.8-5 0-2.3-1.4-3.9-4-4.6Zm-3.5 5.5c-1.2 0-2-.5-2-1.4 0-.5.2-.9.7-1.2.6-.4 1.7-.6 3.3-.7-.2 2.1-1 3.3-2 3.3Z"/></svg>
+          </a>
+          <a href="https://youtube.com/@aanyavibes" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.9 2.9 0 0 0-2-2C17.8 4.7 12 4.7 12 4.7s-5.8 0-7.6.5a2.9 2.9 0 0 0-2 2C2 9 2 12 2 12s0 3 .4 4.8a2.9 2.9 0 0 0 2 2c1.8.5 7.6.5 7.6.5s5.8 0 7.6-.5a2.9 2.9 0 0 0 2-2C22 15 22 12 22 12s0-3-.4-4.8ZM10 15.3V8.7L15.5 12 10 15.3Z"/></svg>
+          </a>
+          <a href="https://facebook.com/aanyavibes" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.4-3.2h-3.2V8.5c0-.9.3-1.6 1.6-1.6h1.7V4.1c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.3v2.3H8v3.2h2.2V22h3.3Z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero-image fade">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=70" alt="Aanya hero preview" width="900" height="1200" loading="eager" fetchpriority="high" />
+      </div>
+    </div>
+  </header>
+
+  <section class="social-strip">
+    <div class="container social-items">
+      <div class="stat fade">
+        <strong data-target="120000">0</strong>
+        <span>Real Followers Across My Public Platforms</span>
+      </div>
+      <div class="stat fade">
+        <strong data-target="18000">0</strong>
+        <span>Private Circle Members</span>
+      </div>
+      <div class="stat fade">
+        <strong>Updated Daily</strong>
+        <div class="social-icons" aria-label="Social platforms">
+          <span aria-hidden="true">📸</span>
+          <span aria-hidden="true">📘</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="fade">See What You’re Missing…</h2>
+      <p class="fade">What you see on Instagram is just 10%.</p>
+      <div class="preview-grid">
+        <a class="preview-item fade" href="#" data-dfans-link data-preview="1" target="_blank" rel="noopener noreferrer"><img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=480&q=60" alt="Locked exclusive preview 1" width="480" height="640" loading="lazy" /><span class="locked">Private Preview • Tap to Unlock 🔒</span><span class="hover-hint">Tap to unlock 🔥</span></a>
+        <a class="preview-item fade" href="#" data-dfans-link data-preview="2" target="_blank" rel="noopener noreferrer"><img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=480&q=60" alt="Locked exclusive preview 2" width="480" height="640" loading="lazy" /><span class="locked">Private Preview • Tap to Unlock 🔒</span><span class="hover-hint">Tap to unlock 🔥</span></a>
+        <a class="preview-item fade" href="#" data-dfans-link data-preview="3" target="_blank" rel="noopener noreferrer"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=480&q=60" alt="Locked exclusive preview 3" width="480" height="640" loading="lazy" /><span class="locked">Private Preview • Tap to Unlock 🔒</span><span class="hover-hint">Tap to unlock 🔥</span></a>
+        <a class="preview-item fade" href="#" data-dfans-link data-preview="4" target="_blank" rel="noopener noreferrer"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=480&q=60" alt="Locked exclusive preview 4" width="480" height="640" loading="lazy" /><span class="locked">Private Preview • Tap to Unlock 🔒</span><span class="hover-hint">Tap to unlock 🔥</span></a>
+        <a class="preview-item fade" href="#" data-dfans-link data-preview="5" target="_blank" rel="noopener noreferrer"><img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=480&q=60" alt="Locked exclusive preview 5" width="480" height="640" loading="lazy" /><span class="locked">Private Preview • Tap to Unlock 🔒</span><span class="hover-hint">Tap to unlock 🔥</span></a>
+        <a class="preview-item fade" href="#" data-dfans-link data-preview="6" target="_blank" rel="noopener noreferrer"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=480&q=60" alt="Locked exclusive preview 6" width="480" height="640" loading="lazy" /><span class="locked">Private Preview • Tap to Unlock 🔒</span><span class="hover-hint">Tap to unlock 🔥</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="fade">This Is Where I’m Unfiltered.</h2>
+      <p class="fade">This is where I’m real.</p>
+      <div class="cards">
+        <article class="card fade"><span class="icon">✨</span><h3>Daily Private Drops</h3><p>New private content every single day.</p></article>
+        <article class="card fade"><span class="icon">💬</span><h3>Personalized Replies</h3><p>I respond more here than anywhere else.</p></article>
+        <article class="card fade"><span class="icon">🎬</span><h3>Behind-The-Scenes Moments</h3><p>Late night vibes & real moments.</p></article>
+        <article class="card fade"><span class="icon">🎁</span><h3>Members Only Surprises</h3><p>Special drops only insiders see.</p></article>
+      </div>
+      <div style="margin-top: 1.3rem" class="fade"><a href="#convert" class="cta-btn">Unlock My Private Page 🔥</a></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="fade">How It Works</h2>
+      <p class="fade">Takes less than 1 minute.</p>
+      <div class="steps">
+        <article class="step fade"><h3>Step 1</h3><p>Click “Unlock My Private Page”.</p></article>
+        <article class="step fade"><h3>Step 2</h3><p>Sign Up Securely (Takes 30 Seconds).</p></article>
+        <article class="step fade"><h3>Step 3</h3><p>Unlock My Exclusive Content.</p></article>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container">
+      <h2 class="fade">They Joined. They Stayed.</h2>
+      <div class="cards">
+        <article class="card fade"><span class="icon">🔥</span><p>"Best decision ever 🔥 Totally different from Instagram."</p></article>
+        <article class="card fade"><span class="icon">😍</span><p>"She actually replies here 😍 I didn’t expect that."</p></article>
+        <article class="card fade"><span class="icon">✨</span><p>"Content here is next level. Worth joining."</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="convert" class="section conversion">
+    <div class="container fade">
+      <h2 class="headline-glow">Ready To See The Real Me?</h2>
+      <p>This is where I share what never makes it to Instagram, Facebook, or YouTube.</p>
+      <div class="micro-trust">You’ve seen my public posts. This is different.</div>
+      <div class="micro-trust">18+ Private Platform • Secure Payments • Instant Unlock</div>
+      <a class="cta-btn" data-dfans-link href="#" target="_blank" rel="noopener noreferrer">Unlock My Private Page 🔥</a>
+      <div class="trust-note conversion-trust">Secure external platform • Instant access after sign up</div>
+      <div class="trust-note">No spam. No hidden steps. Direct access after secure sign up.</div>
+      <div class="scarcity-line">Access closes once today’s private spots are filled 💋</div>
+      <div class="live-viewers"><span id="liveCount"></span> people viewing this page right now</div>
+      <div class="spots-left"><span id="spotsLeft"></span> private spots left today</div>
+    </div>
+  </section>
+
+
+  <section class="section follow-public">
+    <div class="container fade">
+      <h2>Follow My Public Life</h2>
+      <p>See my daily highlights, reels, and updates on my public platforms.
+Join my private page for exclusive content I never post publicly.</p>
+      <div class="public-links">
+        <a href="https://instagram.com/aanyavibes" target="_blank" rel="noopener noreferrer">📸 Follow on Instagram</a>
+        <a href="https://facebook.com/aanyavibes" target="_blank" rel="noopener noreferrer">📘 Follow on Facebook</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section collab">
+    <div class="container fade">
+      <h2>Brand Collaborations &amp; Promotions</h2>
+      <p>For serious brand partnerships, media, and collaborations.</p>
+      <p style="margin-top: 0.6rem;"><a href="mailto:aanyaverma.collab@gmail.com">aanyaverma.collab@gmail.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#" aria-label="Privacy policy">Privacy Policy</a>
+      <span>18+ Only</span>
+    </div>
+    <div>© 2026 Aanya. All Rights Reserved.</div>
+    <div style="margin-top:0.3rem;font-size:0.75rem;color:#999;">
+Official links only. Beware of impersonation accounts.
+</div>
+    <div class="footer-social">
+      <a href="https://instagram.com/aanyavibes" target="_blank" rel="noopener noreferrer">Instagram</a> • <a href="https://facebook.com/aanyavibes" target="_blank" rel="noopener noreferrer">Facebook</a>
+    </div>
+    <div class="footer-icon-row" aria-label="Footer social icons">
+      <a href="https://instagram.com/aanyavibes" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5Zm8.9 1.4a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4Z"/></svg>
+      </a>
+      <a href="https://threads.net/@aanyavibes" target="_blank" rel="noopener noreferrer" aria-label="Threads">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 10.2c-.2-1.6-1.2-2.5-2.9-2.8-2-.3-4.1.2-5.1 1.4l1.4 1.1c.6-.7 1.9-1 3.4-.8.9.1 1.4.6 1.5 1.4-2.2.1-3.8.5-4.8 1.2-1 .7-1.4 1.6-1.3 2.7.1 1.8 1.7 3 4 3 1.7 0 2.9-.6 3.6-1.8.2.4.3.8.3 1.3 0 1.8-1.4 3.1-3.9 3.1-2.1 0-3.5-.8-4.4-2.3l-1.5 1c1.1 1.9 3 3.1 5.9 3.1 3.6 0 5.8-2 5.8-5 0-2.3-1.4-3.9-4-4.6Zm-3.5 5.5c-1.2 0-2-.5-2-1.4 0-.5.2-.9.7-1.2.6-.4 1.7-.6 3.3-.7-.2 2.1-1 3.3-2 3.3Z"/></svg>
+      </a>
+      <a href="https://youtube.com/@aanyavibes" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.9 2.9 0 0 0-2-2C17.8 4.7 12 4.7 12 4.7s-5.8 0-7.6.5a2.9 2.9 0 0 0-2 2C2 9 2 12 2 12s0 3 .4 4.8a2.9 2.9 0 0 0 2 2c1.8.5 7.6.5 7.6.5s5.8 0 7.6-.5a2.9 2.9 0 0 0 2-2C22 15 22 12 22 12s0-3-.4-4.8ZM10 15.3V8.7L15.5 12 10 15.3Z"/></svg>
+      </a>
+      <a href="https://facebook.com/aanyavibes" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.4-3.2h-3.2V8.5c0-.9.3-1.6 1.6-1.6h1.7V4.1c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.3v2.3H8v3.2h2.2V22h3.3Z"/></svg>
+      </a>
+    </div>
+    <div class="trust-note">This page is intended for 18+ audiences only.</div>
+  </footer>
+
+  <div class="sticky-cta" role="region" aria-label="Sticky call to action">
+    <small>Limited private access</small>
+    <a class="cta-btn" data-dfans-link href="#" target="_blank" rel="noopener noreferrer">Unlock My Private Page 🔥</a>
+  </div>
+
+  <a class="floating-btn" data-dfans-link href="#" target="_blank" rel="noopener noreferrer" aria-label="Open private page">✦</a>
+
+  <div class="popup" id="exitPopup" aria-hidden="true">
+    <div class="popup-card">
+      <button class="close-popup" id="closePopup" aria-label="Close popup">×</button>
+      <h2>Leaving already? My private content isn’t posted anywhere else 💋</h2>
+      <p style="margin-bottom: 1rem;">This is the only place I post my real content.</p>
+      <a href="#" data-dfans-link target="_blank" rel="noopener noreferrer" class="cta-btn">Unlock My Private Page 🔥</a>
+    </div>
+  </div>
+
+
+  <div class="popup" id="reinforcePopup" aria-hidden="true">
+    <div class="popup-card">
+      <button class="close-popup" id="closeReinforce" aria-label="Close popup">×</button>
+      <h2>Still thinking? My private content is waiting 💋</h2>
+      <a href="#" data-dfans-link target="_blank" rel="noopener noreferrer" class="cta-btn">Unlock My Private Page 🔥</a>
+    </div>
+  </div>
+
+  <script>
+    const DFANS_LINK = "https://dfans.co/aanyavibes?c=2";
+    let dfansClicked = false;
+    const stats = document.querySelectorAll('[data-target]');
+    const formatCounter = (value) => {
+      if (value >= 1000) return `${Math.round(value / 1000)}K+`;
+      return `${value}+`;
+    };
+
+    const animateCounter = (el) => {
+      const target = Number(el.dataset.target);
+      const duration = 1400;
+      const start = performance.now();
+
+      const tick = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        const current = Math.floor(target * (1 - Math.pow(1 - progress, 3)));
+        el.textContent = formatCounter(current);
+        if (progress < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+
+
+    const liveCount = document.getElementById('liveCount');
+    if (liveCount) {
+      liveCount.textContent = Math.floor(Math.random() * (45 - 18 + 1)) + 18;
+    }
+
+    const spotsLeft = document.getElementById('spotsLeft');
+    if (spotsLeft) {
+      spotsLeft.textContent = Math.floor(Math.random() * (18 - 5 + 1)) + 5;
+    }
+
+    document.querySelectorAll('[data-dfans-link]').forEach((link) => {
+      link.setAttribute('href', DFANS_LINK);
+      link.addEventListener('click', () => {
+        dfansClicked = true;
+      });
+    });
+
+    const stickyUrgency = document.querySelector('.sticky-cta small');
+    const urgencyMessages = ['Limited private access', 'Daily private drops', 'Members only content'];
+    let urgencyIndex = 0;
+    if (stickyUrgency) {
+      setInterval(() => {
+        urgencyIndex = (urgencyIndex + 1) % urgencyMessages.length;
+        stickyUrgency.textContent = urgencyMessages[urgencyIndex];
+      }, 2800);
+    }
+
+    const mainCta = document.querySelector('#convert .cta-btn');
+    let ctaGlowTriggered = false;
+    window.addEventListener('scroll', () => {
+      const scrollDepth = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+      if (!ctaGlowTriggered && scrollDepth >= 0.7 && mainCta) {
+        ctaGlowTriggered = true;
+        mainCta.classList.add('cta-flash');
+      }
+    }, { passive: true });
+
+    const reinforcePopup = document.getElementById('reinforcePopup');
+    const closeReinforce = document.getElementById('closeReinforce');
+    setTimeout(() => {
+      if (reinforcePopup && !dfansClicked) {
+        reinforcePopup.classList.add('show');
+        reinforcePopup.setAttribute('aria-hidden', 'false');
+      }
+    }, 26000);
+
+    if (closeReinforce) {
+      closeReinforce.addEventListener('click', () => {
+        reinforcePopup.classList.remove('show');
+        reinforcePopup.setAttribute('aria-hidden', 'true');
+      });
+    }
+
+    if (reinforcePopup) {
+      reinforcePopup.addEventListener('click', (event) => {
+        if (event.target === reinforcePopup) {
+          reinforcePopup.classList.remove('show');
+          reinforcePopup.setAttribute('aria-hidden', 'true');
+        }
+      });
+    }
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          if (entry.target.matches('[data-target]') && !entry.target.dataset.animated) {
+            animateCounter(entry.target);
+            entry.target.dataset.animated = '1';
+          }
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade, [data-target]').forEach((el) => observer.observe(el));
+
+    const exitPopup = document.getElementById('exitPopup');
+    const closePopup = document.getElementById('closePopup');
+    let popupShown = false;
+
+    document.addEventListener('mouseout', (event) => {
+      if (!popupShown && event.clientY <= 2) {
+        popupShown = true;
+        exitPopup.classList.add('show');
+        exitPopup.setAttribute('aria-hidden', 'false');
+      }
+    });
+
+    closePopup.addEventListener('click', () => {
+      exitPopup.classList.remove('show');
+      exitPopup.setAttribute('aria-hidden', 'true');
+    });
+
+    exitPopup.addEventListener('click', (event) => {
+      if (event.target === exitPopup) {
+        exitPopup.classList.remove('show');
+        exitPopup.setAttribute('aria-hidden', 'true');
+      }
+    });
+  </script>
+</body>
+</html>
